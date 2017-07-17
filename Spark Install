@@ -1,0 +1,25 @@
+Install Spark on Windows:
+1. install Java JDK: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+2. download spark and unzip to C:\Spark: http://spark.apache.org/downloads.html
+3. download winutil.exe and move to C:\winutils\bin: https://github.com/steveloughran/winutils
+4. add user Environment Variables:
+	.	a. HADOOP_HOME - C:\winutils
+	.	b. AVA_HOME - C:\Progra~1\Java\jdk1.8.0_131
+	.	c. SPARK_HOME - SPARK_HOME
+	.	d. Path - ;%SPARK_HOME%\bin;%JAVA_HOME%\bin
+5. test: run spark-shell in cmd, type println(“hello”)
+
+
+Install Spark on Ubuntu
+1. install Java SDK: sudo apt-get install openjdk-9-jdk
+2. install scala: sudo apt-get install scala
+3. test scala: run scala in terminal, type println(“hello”)
+	a. if got the ‘initialize compiler’ error, select jdk 8 via the following command:
+		sudo update-alternatives —config java(c)
+4. install git: sudo apt-get install git
+5. download spark to ‘Home’: http://spark.apache.org/downloads.html
+6. unzip the package: tar xvf spark-xxx-bin-hadoopxx.tgz
+7. test:
+	a. cd spark-xxx-bin-hadoopxx
+	b. ./spark-shell
+	c. println(“hello”)
